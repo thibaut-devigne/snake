@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My super snake</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+  </head>
+  <body>
+    <script src="utils.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+    <h1>My super snake</h1>
+    <div id="snakeStyleOptions">
+      <div class="snakeStyleOption" onclick="onSelectSnakeStyle('abo')">
+        <img class="snakeStyleOptionImg" src="./images/snake_style_options/abo_pokemon.jpg">
+      </div>
+      <div class="snakeStyleOption" onclick="onSelectSnakeStyle('onix')">
+        <img class="snakeStyleOptionImg" src="./images/snake_style_options/onix_pokemon.png">
+      </div>
+      <div class="snakeStyleOption" onclick="onSelectSnakeStyle('bobMarley')">
+        <img class="snakeStyleOptionImg" src="./images/snake_style_options/bob_marley_reggae.jpg">
+      </div>
+      <div class="snakeStyleOption" onclick="onSelectSnakeStyle('france')">
+        <img class="snakeStyleOptionImg" src="./images/snake_style_options/france.jfif">
+      </div>
+      <div class="snakeStyleOption" onclick="onSelectSnakeStyle('christmas')">
+        <img class="snakeStyleOptionImg" src="./images/snake_style_options/christmas.jfif">
+      </div>
+    </div>
+    <div id="result_modal">
+      <div id="resultModalContent">
+        <div id="modalHeader">
+          <div id="modalTitle">You lose ... </div>
+          <div id="closeModal" onclick="onCloseModal()">X</div>
+        </div>
+        <div id="modalContent">
+          <div id="snake_crying_lose_modal_container">
+            <img id="snake_crying_lose_modal" src="./images/crying_snake_looser.png" />
+          </div>
+          <p id="yourScore"></p>
+          <div id="highScoresContainer">
+            <div id="highScores"></div>
+          </div>
+        </div>
+        <div id="modalFooter">
+          <button id="restart" onclick="onRestartClick()">RESTART (R)</div>
+        </div>
+      </div>
+    </div>
+    <button id="pause" onclick="onPauseClick()">PAUSE (SPACE)</button>
+    <button id="play" onclick="onPlayClick()">PLAY (SPACE)</button>
+    <button id="restart" onclick="onRestartClick()">RESTART (R)</button>
+    <div id="snakeGrid"></div>
+  </body>
+</html>

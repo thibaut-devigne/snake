@@ -1,0 +1,158 @@
+body {
+  font-family: sans-serif;
+}
+
+p {
+  margin: 0px;
+}
+
+#snakeStyleOptions {
+  display: flex;
+  flex-direction: row;
+}
+
+.snakeStyleOption {
+  cursor: pointer;
+  margin: 10px;
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  border: 2px solid rgb(172, 172, 172);
+  padding: 10px;
+}
+
+.snakeStyleOption:hover {
+  color: #2ecc71;
+  border: 2px solid #2ecc71;
+  transform: scale(1.1);
+}
+
+.snakeStyleOptionImg {
+  object-fit: contain;
+  width: 75px;
+  height: 75px;
+}
+
+#result_modal {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 600px;
+  height: 600px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  /* box-shadow: 0 0 0 50vmax rgba(0,0,0,.5); */
+  box-shadow: 0 0 0 50vmax rgba(175, 10, 10, 0.5);
+}
+
+#resultModalContent {
+  padding: 20px;
+}
+
+#modalHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#modalTitle {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#snake_crying_lose_modal_container {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#snake_crying_lose_modal {
+  width: 200px;
+}
+
+#highScoresContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#highScores {
+  overflow: auto;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.oneLineScore {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.highScorePositionAndName {
+  display: flex;
+  flex-direction: row;
+}
+
+.highScorePosition {
+  width: 25px;
+  padding-right: 5px;
+  text-align: end;
+}
+
+#modalFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#closeModal {
+  cursor: pointer;
+}
+
+#closeModal:hover {
+  color: red;
+  scale: 1.1;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.cell {
+  /* padding: 10px; */
+}
+.cellSelected {
+  background-color: #2ecc71;
+}
+
+.appleCell {
+  background-color: #f1c40f;
+}
+
+.collisionCell {
+  background-color: #e74c3c;
+}
+
+button {
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  border-radius: 10px;
+}
+
+#pause {
+  background-color: #fdd5cf;
+}
+
+#play {
+  background-color: #d8edc8;
+}
