@@ -127,7 +127,6 @@ const getNextSnake = (previousSnake, direction) => {
     displayResultModal()
   } else {
     //HEAD FORWARD
-    newSnakeHeadElt.classList.add("cellSelected");
     newSnake.push(newHead)
   }
 
@@ -144,7 +143,6 @@ const getNextSnake = (previousSnake, direction) => {
   const shouldHideTail = !snakeHasEatApple
   if(shouldHideTail) {
     const snakeTailElt = document.getElementById(`cell_${tail[0]}_${tail[1]}`);
-    snakeTailElt.classList.remove("cellSelected");
     snakeTailElt.style.backgroundColor = ""
 
     newSnake.shift()
@@ -188,8 +186,7 @@ const generateSnakeGrid = () => {
       let isApple = isSamePosition(applePosition, cellPosistion)
       let isSelected = isSnakeCell(initialSnake, cellPosistion)
       let isObstacle = isObstacleCell(obstacles, cellPosistion)
-      if(isSelected) cell.classList.add("cellSelected")
-      else if(isObstacle) {
+      if(!isSelected && isObstacle) {
         // cell.innerHTML = "X"
         let skull = document.createElement('img');
         skull.src = "skull.svg"
@@ -202,6 +199,7 @@ const generateSnakeGrid = () => {
     }
     snakeGrid.appendChild(row);
   }
+  repaintSnake()
 }
 
 

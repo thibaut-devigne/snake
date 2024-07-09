@@ -126,9 +126,9 @@ p {
 .cell {
   /* padding: 10px; */
 }
-.cellSelected {
-  background-color: #2ecc71;
-}
+/* .cellSelected {
+  background-color: cyan;
+} */
 
 .appleCell {
   background-color: #f1c40f;
