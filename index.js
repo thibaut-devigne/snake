@@ -53,7 +53,16 @@ const onCloseModal = () => {
   hideResultModal()
 }
 
-export const onSelectSnakeStyle = (styleSelected) => {
+export const onSelectSnakeStyle = ({id}) => {
+  let styleSelected = id
+  var options = document.getElementsByClassName("snakeStyleOption selectedStyle");
+  if(options.length !== 0) {
+    for (let opt of options) {
+      opt.classList.remove("selectedStyle")
+    }
+  }
+
+  document.getElementById(id).classList.add("selectedStyle")
   snakeColors = generateSnakeColors(100, styleSelected)
 }
 
